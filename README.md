@@ -1,5 +1,7 @@
 # SplitView
 这是项目里分离出来的做题页面。底部拖拽View
+## 效果
+## 源代码
 ```
 public class SplitView extends ViewGroup implements View.OnTouchListener {
 
