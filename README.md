@@ -1,6 +1,51 @@
 # SplitView
 这是项目里分离出来的做题页面。底部拖拽View
 ## 效果
+https://static.dingtalk.com/media/lADPGojJ9mBn9ILNBP7NAk4_590_1278.jpg_720x720q90g.jpg?bizType=im
+## xml 使用
+```
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sothree="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <com.lgw.kaoyan.ui.tiku.SplitView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:minSplitBottom="20dp"
+        app:minSplitTop="0dp"
+        app:splitRatio="0.6">
+
+       <!--    在这里写入第一个view    -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/handler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/photoanswer_iconb" />
+
+            <View
+                style="@style/line_horizontal_1px"
+                android:layout_below="@id/handler" />
+        </RelativeLayout>
+            <!--    在这里写入第第三个view    -->
+       
+
+    </com.lgw.kaoyan.ui.tiku.SplitView>
+</FrameLayout>
+
+
+```
 ## 源代码
 ```
 public class SplitView extends ViewGroup implements View.OnTouchListener {
